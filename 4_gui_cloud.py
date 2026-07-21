@@ -1,14 +1,11 @@
-# 必要なライブラリをインポート
 import os, asyncio, feedparser
 import streamlit as st
 from strands import Agent, tool
 
-# Streamlitシークレットを環境変数に設定
 os.environ['AWS_ACCESS_KEY_ID'] = st.secrets['AWS_ACCESS_KEY_ID']
 os.environ['AWS_SECRET_ACCESS_KEY'] = st.secrets['AWS_SECRET_ACCESS_KEY']
 os.environ['AWS_DEFAULT_REGION'] = st.secrets['AWS_DEFAULT_REGION']
 
-########## 以降は変更なし ##########
 
 # ツールを定義
 @tool
